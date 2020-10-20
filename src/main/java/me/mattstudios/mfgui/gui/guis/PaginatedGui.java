@@ -116,11 +116,15 @@ public class PaginatedGui extends BaseGui {
 
     /**
      * Adds an {@link GuiItem} to the next available slot in the page area
+     * and returns the slot the item was added to
      *
      * @param item The {@link GuiItem} to add to the page
+     * @return the slot the item was added to
      */
-    public void addItem(@NotNull final GuiItem item) {
+    public int addItem(@NotNull final GuiItem item) {
         pageItems.add(item);
+
+        return pageItems.size() - 1;
     }
 
     /**
